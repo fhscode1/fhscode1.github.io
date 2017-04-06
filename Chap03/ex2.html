@@ -3,22 +3,28 @@
 //basic javascript
 //Aidan Lopez (alo)
 
-var correctAnswer = "";
-var hoomanAnswer = "";
-var randomNumber = "";
-var otherNumber = 
-hoomanAnswer = prompt("What is " + randomNumber  + " plus " + otherNumber);
+var humanAnswer = "";
+var op1 = 2 ;
+var op2 = 3 ;
+var correctAnswer = op1 + op2;
 
-while (hoomanAnswer != correctAnswer) { 
-	
-	if (hoomanAnswer != correctAnswer) {
-		hoomanAnswer = prompt("What is ten plus ten?")
-	}
 
-	if (hoomanAnswer == correctAnswer) {
-		alert("Hooray! You got it right");
-	} 
+while ( humanAnswer != correctAnswer) 
+	{ 
+	humanAnswer = prompt("What is " + op1 + " plus "  + op2);
+
+	if (humanAnswer != correctAnswer) 
+	    {
+		alert("wrong, try again");
+		}
+        else 
+            {
+            alert("correct!")
+            }
 
 }
+// end of while not a match
+alert("game over");
+
 
 </script>

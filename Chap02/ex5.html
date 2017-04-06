@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>ex5</title>
+</head>
+<body>
+<script>
+//loaded die
+//basic javascript
+//Aidan Lopez (alo)
+
+var result = "";
+
+for(i=1;  i<=10; i++ )
+	{
+	var diceRoll = Math.floor(Math.random() * 2) + 1;
+	switch(diceRoll){
+		case 1:
+			result = "1...";
+			console.log(result);
+			break;
+		case 2:
+			result = Math.floor(Math.random() * 6) + 1;
+			console.log(result);
+			break;
+		default:
+			result = "Hold up something's wrong try again.";
+	}
+
+}
+
+
+
+</script>
+
+press the ... menu to open the developer tools conosle log or  Ctrl+shift+J on windows
+
+<br>
+own a mac, that shortcut is something like  Cmd+Alt+J
+</body>
+</html>

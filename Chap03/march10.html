@@ -1,0 +1,38 @@
+<script type="text/javascript">
+// http://stackoverflow.com/questions/1183872/put-a-delay-in-javascript
+function mySleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+// end of stolen code
+
+
+
+function aidanFunction()
+{
+for(  var i = 1;     i<=10   ;       i++)  
+     {
+     document.write("iValue=" + i);
+     console.log("i= " + i);
+     mySleep(2000);
+
+     }
+// rather than using alert we use console.log() and document.write()
+}
+
+
+
+</script>
+
+
+<body>
+
+<button onclick=aidanFunction()>
+	click me
+</button>
+
+</body>

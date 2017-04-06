@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>ex1 chap2</title>
+</head>
+<body>
+<script>
+//fortune teller
+//basic javascript
+//Aidan Lopez (alo)
+
+var fortune = ""
+
+var diceRoll = Math.floor(Math.random() * 5) + 1;
+
+console.log(diceRoll);
+
+switch(diceRoll){
+	case 1:
+		fortune = "Oof, you're in for one hell of a day.";
+		break;
+	case 2:
+		fortune = "Well I've seen worse but this is bad...";
+		break;
+	case 3:
+		fortune = "You will have another day, nothing to dread or look forward to.";
+		break;
+	case 4:
+		fortune = "Oh! you'll have a pretty good day! :)";
+		break;
+	case 5:
+		fortune = "HOLY SWEET MOTHER OF MEMES YOU'RE GONNA HAVE A GREAT DAY!!!";
+		break;
+	default:
+		fortune = "Hold up something's wrong try again.";
+}
+alert(fortune)
+</script>
+</body>
+</html>

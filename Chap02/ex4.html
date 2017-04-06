@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>ex4</title>
+</head>
+<body>
+<script>
+//random saying
+//basic javascript
+//Aidan Lopez
+
+var quote = ""
+
+var randomizer = Math.floor(Math.random() * 5) + 1;
+console.log(randomizer);
+switch(randomizer){
+	case 1:
+		quote = "This is going to be legend (wait for it) DARY! -Barney Stinson";
+		break;
+	case 2:
+		quote = "A lie is just a great story that somebody ruined with the truth. -Barney Stinson";
+		break;
+	case 3:
+		quote = "Taking your own life. Interesting expression, taking it from who? Once it's over, it's not you who'll miss it. Your own death is something that happens to everyone else. Your life is not your own, keep your hands off it. -Sherlock Holmes";
+		break;
+	case 4:
+		quote = "When I'm sad I stop being sad and be awesome instead. -Barney Stinson";
+		break;
+	case 5:
+		quote = "Suit up! -Barney Stinson";
+		break;
+	default:
+		quote = "Something has gone wrong try again.";
+		break;
+}
+
+alert(quote)
+
+</script>
+</body>
+</html>

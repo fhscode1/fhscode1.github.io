@@ -4,8 +4,12 @@
 //Aidan Lopez (alo)
 
 var humanAnswer = "";
-var op1 = Math.floor(Math.random() * 100) + 1;
-var op2 = Math.floor(Math.random() * 100) + 1;
+var myMax = 10;
+myMax = prompt("what's the hardest number you want?");
+myMax = eval(myMax);
+
+var op1 = Math.floor(Math.random() * myMax) + 1;
+var op2 = Math.floor(Math.random() * myMax) + 1;
 var correctAnswer = op1 + op2;
 
 while ( humanAnswer != correctAnswer) 

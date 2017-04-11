@@ -9,7 +9,12 @@
 <script type="text/javascript">
 function myFunction()
 {
-alert("do I annoy you?");
+var myId = 0;
+myId = document.getElementById("outputDiv");
+myId.innerHTML =  myForm.myText.value  ;
+// use the innerHTML property    no ()
+
+
 }
 // close of function
 </script>
@@ -17,14 +22,18 @@ alert("do I annoy you?");
 
 
 
-
-
-
-
-
-
 <body>
+
+    <form name="myForm">
+         <input type="text" name="myText"  >
+
+    </form>
+
+
 	<div onclick=myFunction() id="outputDiv"  >
-	Page was loaded... now click me...
+	Why did the chicken cross the road?  CLick me to find out...
 	</div>
+
+
+
 </body>

@@ -7,14 +7,21 @@ var humanAnswer = "";
 var op1 = Math.floor(Math.random() * 30) + 1;
 var op2 = Math.floor(Math.random() * 30) + 1;
 var correctAnswer = op1 + op2;
+var counter = 0;
 
-while ( humanAnswer != correctAnswer) 
+while (humanAnswer != correctAnswer && counter != 5)
 	{ 
 	humanAnswer = prompt("What is " + op1 + " plus "  + op2);
 
 	if (humanAnswer != correctAnswer) 
 	    {
 		alert("Wrong, try again.");
+	}
+
+	if (humanAnswer == correctAnswer)
+	{
+		alert("Skeet skeet.");
+		counter += 1;
 	}
 } 
 // end of while not a match

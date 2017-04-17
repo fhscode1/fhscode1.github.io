@@ -1,0 +1,24 @@
+<script>
+//number guesser reverse
+//basic javascript 
+//Aidan Lopez (alo)
+
+var guess = 20;
+var response = "";
+var max = 100;
+var min = 0;
+
+while (response != "c") {
+	response = prompt("My guess is "  + guess);
+
+	if (response == "h") {
+		max = guess;
+		guess = Math.floor(Math.random() * (max-min)) + min;
+	}
+	else if (response == "l"){
+		min = guess;
+		guess = Math.floor(Math.random() * (max-min)) + min;
+	}
+}
+
+</script>

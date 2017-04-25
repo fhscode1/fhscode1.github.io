@@ -1,0 +1,26 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="april21.css">
+
+<script>
+function buttonController(){
+var myBodyId = document.getElementById("myBody")
+var myNewE = document.createElement("p");
+var myNewT = document.createTextNode("Literally new paragraph");
+
+myNewE.appendChild(myNewT);
+myBodyId.appendChild(myNewE);
+}
+</script>
+</head>
+
+<body id = "myBody">
+<button onClick = buttonController()>
+Click me
+</button>
+
+</body>
+
+
+
+</html>

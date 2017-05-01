@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css" href="x">
+<script type="text/javascript">
+function addPara(){
+var b = document.getElementById("bodyId");
+var d = document.createElement("div");
+var t = document.createTextNode("blah");
+// first we create, then we append into the garden of eden
+d.appendChild(t);
+b.appendChild(d);
+
+}
+// end of function
+</script>
+
+
+<body id="bodyId" onclick="addPara()" >
+
+This is text
+
+
+</body>

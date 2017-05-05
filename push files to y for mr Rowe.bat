@@ -6,7 +6,7 @@ echo Press red x to abort, any other key to continue.
 echo.
 pause
 
-xcopy . y:\ddccode2 /y /e /s
+xcopy . y:\      /y /e /s
 echo .
 echo done
 echo.

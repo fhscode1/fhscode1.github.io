@@ -1,0 +1,51 @@
+#container {
+background-color: gray;
+color: white;
+}
+/* close styling for "bigbox" (container) */
+
+
+#titlebox {
+width: 70%;
+/* if we remove the width the header box does an autofit for objects inside*/
+margin-left: 15%;
+background-color: black;
+float: left;
+clear: both;
+color: black;
+}
+/* close styling for "titlebox" (header) */
+
+
+#wordbox {
+height: 900px;
+width: 70%;
+margin-left: 15%;
+background-color: white;
+float: left;
+clear: both;
+color: black;
+}
+/* close styling for textarea */
+
+
+.smallmenus {
+height: 60px;
+width: 50px;
+background-color: black;
+float: left;
+clear: ;
+color: white;
+padding: 20px;
+margin-right: auto;
+margin-left: auto;
+}
+/* close styling for all submenus */
+
+
+.smallmenus:hover {
+background-color: white;
+color: black;
+}
+/* close styling for when mouse is hovering over submenus */
+

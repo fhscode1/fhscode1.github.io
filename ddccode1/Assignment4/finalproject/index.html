@@ -8,88 +8,99 @@
 //Aidan Lopez (alo)
 
 function gradeUser(){
-	var question1 = "q1";
-	var question2 = "q2";
-	var question7 = "q7";
-	var question10 = "q10";
-	var finalMessage = "";
+	var question1 = document.finalProjectForm.q1.value;
+	var question2 = document.finalProjectForm.q2.value;
+	var question7 = document.finalProjectForm.q7.value;
+	var question10 = document.finalProjectForm.q10.value;
+	var finalMessage = "No matter who you are or what you believe in, you're still a person. You're special in your own way, and let no one ever try to take that away from you. Here is a meme just for you, I have plenty.";
 
-	if (question1.value == "n") {
-		finalMessage = "Seriously? You don't like memes?"
+	if (question1 == "no") {
+		finalMessage = "Seriously? You don't like memes? You're wrong. Just about life in general."
 	};
-	if else (question2.value == "n") {
-		finalMessage = "ERROR"
+	if else (question2 == "no") {
+		finalMessage = "ERROR, NONSCIENCE BELIEVER. INITIATING EMERGENCY BILL NYE." 
+	}
+	if else (question10 == "yes") {
+		finalMessage = "Father get off of my website"
 	}
 }
 </script>
 </head>
 <body>
 <h1>My Final Project</h1>
+<form name = "finalProjectForm">
 
+<tr>
+	<td>Do you enjoy memes?</td>
+	<td><input type = "text" name = "q1"></td>
+</tr>
 
-Do you enjoy memes?
-<input type="radio" name="q1" value="y">Yes
-<input type="radio" name="q1" value="n">No
+<br>
+<tr>
+	<td>Do you believe in science?</td>
+	<td><input type = "text" name = "q2"></td>
+</tr>
+
+<br>
+<tr>
+	<td>Are you religious?</td>
+	<td><input type = "text" name = "q3"></td>
+</tr>
 
 <br>
 
-Do you believe in science?
-<input type="radio" name="q2" value="y">Yes
-<input type="radio" name="q2" value="n">No
+<tr>
+	<td>What's your favorite color?</td>
+	<td><input type = "text" name = "q4"></td>
+</tr>
 
 <br>
 
-
-Are you religious?
-<input type="radio" name="q3" value="y">Yes
-<input type="radio" name="q3" value="n">No
-
-<br>
-
-What's your favorite primary color?
-<input type="radio" name="q4" value="b">Blue
-<input type="radio" name="q4" value="r">Red
-<input type="radio" name="q4" value="ye">Yellow
+<tr>
+	<td>Do you identify as LGBTQIA+? If uncomfortable or unsure leave blank</td>
+	<td><input type = "text" name = "q5"></td>
+</tr>
 
 <br>
 
-Do you identify as LGBTQIA+? If uncomfortable or unsure leave blank
-<input type="radio" name="q5" value="y">Yes
-<input type="radio" name="q5" value="n">No
+<tr>
+	<td>Are you a person of color? If uncomfortable leave blank</td>
+	<td><input type = "text" name = "q6"></td>
+</tr>
 
 <br>
 
-Are you a person of color? If uncomfortable leave blank
-<input type="radio" name="q6" value="y">Yes
-<input type="radio" name="q6" value="n">No
+<tr>
+	<td>Do you know how to code computers?</td>
+	<td><input type = "text" name = "q7"></td>
+</tr>
 
 <br>
 
-Do you know how to computer code?
-<input type="radio" name="q7" value="y">Yes
-<input type="radio" name="q7" value="n">No
+<tr>
+	<td>Are you bilingual?</td>
+	<td><input type = "text" name = "q8"></td>
+</tr>
 
 <br>
 
-Are you bilingual?
-<input type="radio" name="q8" value="y">Yes
-<input type="radio" name="q8" value="n">No
+<tr>
+	<td>Are you a talented singer?</td>
+	<td><input type = "text" name = "q9"></td>
+</tr>
 
 <br>
 
-Are you a talented singer?
-<input type="radio" name="q9" value="y">Yes
-<input type="radio" name="q9" value="n">No
-
-Is the person taking this quiz my father?
-<input type="radio" name="q10" value="y">Yes
-<input type="radio" name="q10" value="n">No
+<tr>
+	<td>Is the person taking this quiz my father?</td>
+	<td><input type = "text" name = "q10"></td>
+</tr>
 
 <br>
 <br>
+</form>
 
 <button onclick="gradeUser()">Click Me When Finished</button>
-
 <div> 
 	<!-- this hidden div is blank on purpose -->
 </div>

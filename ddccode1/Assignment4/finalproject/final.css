@@ -9,6 +9,26 @@ text-align:  center;
 font-family: Comic Sans MS;
 }
 
+#outputdiv {
+background-color: red;
+color:white;
+float: left;
+clear: both;
+
+
+}
+
+.questionbox {
+	padding : 2vw;
+	width: 80vw;
+	float: left;
+	margin-left: 8vw;
+	background-color: grey;
+	clear:both;
+
+}
+
+
 #somediv {
 float: left;
 width: 40%;
@@ -17,5 +37,27 @@ margin-left: 25%;
 }
 
 #billButton{
+color: black;
+}
 
+
+/* styles below target a tag and  :   link, visited, hover, active   removes the horrible underlining  */
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    text-decoration: none;
+    color: white;
 }

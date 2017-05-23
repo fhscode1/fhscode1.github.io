@@ -12,7 +12,9 @@ function gradeUser(){
 
 var answer1 = document.myForm.q1.value;
 var myId = document.getElementById("outputdiv");
-var dankMeme = document.getElementById("memeDiv")
+// this is the text output that is red.....
+
+
 
 // fetch the id, then fetch the form data and put into the div
 myId.innerHTML = "your form data is..."  + answer1   +   "  and .. "  + myForm.r1.value ;
@@ -26,7 +28,7 @@ var memeFileName = "junk.png";
 switch(  answer2  )
 {
   case "Y":
-    memeFileName  = "1.png";
+    memeFileName  = "1.jpg";
 
     //  this is where you would randomly pick a number between 1 and 10
 
@@ -48,7 +50,7 @@ switch(  answer2  )
 console.log( "file name check ... "  + memeFileName);
 
 // get ID of the div that's mostly invisible
-var myId = document.getElementById("headermeme")	
+var myId = document.getElementById("memeresult")	
 
 
 // Create an image tag  aka an HTML elemnt
@@ -79,9 +81,6 @@ myId.appendChild(myElement);
 <body>
 <div id="container">
 
-<div id="headermeme">
-<!-- empty div -->
-</div>
 
 
 
@@ -117,6 +116,10 @@ myId.appendChild(myElement);
 </form>
 <!-- ================================ end of form ============================= -->
 
+
+<div id="memeresult">
+<!-- empty div -->
+</div>
 
 
 <div id="buttondiv">

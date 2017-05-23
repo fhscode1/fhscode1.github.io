@@ -1,6 +1,26 @@
+#container {
+	width: 90vw;
+	float: left;
+	margin-left: 5vw;
+	background-color: yellow;
+}
+
+
+div {
+padding : 1vw;
+width: 70vw;
+margin-left: 9vw;
+/* all these above can not exceed 90 width , the container uses 90vw  */
+margin-top: 3vh;
+clear:both;
+float: left;
+/* unless we change these rules, every div is selected to have this styling */
+}
+
 h1 {
 	font-size: 26pt;
 }
+
 
 body {
 background-color: black;
@@ -9,36 +29,38 @@ text-align:  center;
 font-family: Comic Sans MS;
 }
 
+
+#headermeme {
+
+}
+
+
+#headertext {
+font-size: 26pt;
+background-color: pink;
+color: white;
+}
+
+
+
 #outputdiv {
 background-color: red;
-color:white;
-float: left;
-clear: both;
-
+color: white;
 
 }
 
 .questionbox {
-	padding : 2vw;
-	width: 80vw;
-	float: left;
-	margin-left: 8vw;
-	background-color: grey;
-	clear:both;
-
-}
-
-
-#somediv {
-float: left;
-width: 40%;
-padding: 5%;
-margin-left: 25%;
-}
-
-#billButton{
+background-color: white;
 color: black;
 }
+
+
+
+
+#buttondiv{
+background-color: green;
+}
+
 
 
 /* styles below target a tag and  :   link, visited, hover, active   removes the horrible underlining  */
@@ -61,3 +83,4 @@ a:active {
     text-decoration: none;
     color: white;
 }
+

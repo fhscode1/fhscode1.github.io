@@ -2,9 +2,6 @@
 <head>
 <link rel="stylesheet" type="text/css" href="final.css">
 <title>Final Project ALO</title>	
-
-
-
 <script type="text/javascript">
 //Final Project for the year
 //Javascript/HTML
@@ -12,22 +9,67 @@
 
 function gradeUser(){
 	
-	var answer1 = document.myForm.q1.value;
 
-	var myId = document.getElementById("outputdiv");
+var answer1 = document.myForm.q1.value;
+var myId = document.getElementById("outputdiv");
+var dankMeme = document.getElementById("memeDiv")
 
-	// fetch the id, then fetch the form data and put into the div
-	myId.innerHTML = "your form data is..."  + answer1   +   "  and .. "  + myForm.r1.value ;
+// fetch the id, then fetch the form data and put into the div
+myId.innerHTML = "your form data is..."  + answer1   +   "  and .. "  + myForm.r1.value ;
 
 
-	// condition check on the radio button....  
-	if (  myForm.r1.value == "A" )
-	{
-	console.log("looks like we have a type a person here...")	;
-	}
+// condition check on the radio button....  
+var answer2 =  myForm.r1.value ;
+
+var memeFileName = "junk.png";
+
+switch(  answer2  )
+{
+  case "Y":
+    memeFileName  = "1.png";
+
+    //  this is where you would randomly pick a number between 1 and 10
+
+
+
+
+    break;
+  case "N":
+    memeFileName = "hater.png";
+    break;
+  case "O":
+    memeFileName = "other.png";
+    break;
+  default:
+    memeFileName = "error.png";
+} // end switch
+
+
+console.log( "file name check ... "  + memeFileName);
+
+// get ID of the div that's mostly invisible
+var myId = document.getElementById("headermeme")	
+
+
+// Create an image tag  aka an HTML elemnt
+var myElement = document.createElement("img");             
+
+var myAttribute = document.createAttribute("src");       
+// Create a "src" attribute
+
+myAttribute.value = memeFileName;           
+// Set the value of the src attribute to the file name  src="some.png"
+
+myElement.setAttributeNode(myAttribute);                          
+// connect the attribute to the element 
+
+myId.appendChild(myElement);                     
+// Append img element to div  should show up asap
+
 
 
 }
+// end of function
 
 
 
@@ -35,37 +77,65 @@ function gradeUser(){
 </script>
 </head>
 <body>
-<h1>My Final Project</h1>
+<div id="container">
 
+<div id="headermeme">
+<!-- empty div -->
+</div>
+
+
+
+<div id="headertext">
+	My Final Project
+</div>
 
 
 <form name="myForm">
 
-	<div class="questionbox">
-	Do you enjoy memes? <br>
-	<input type = "text" name = "q1">
-	</div>
-	<br>
+<div class="questionbox">
+	Do you support equal rights for all people <br>
+		<input type="radio" name="r1" value="Y">Yes  <br>
+		<input type="radio" name="r1" value="N">No <br>
+		<input type="radio" name="r1" value="O">Other 
+</div>
 
-		<input type="radio" name="r1" value="A" checked>A<br>
-		<input type="radio" name="r1" value="B">B<br>
-		<input type="radio" name="r1" value="C">C  
+
+<div class="questionbox">
+	Do you enjoy memes?
+	<input type = "text" name = "q1">
+</div>
+
+<div class="questionbox">
+	Do you have any LGBT friends?
+	<input type = "text" name = "q2">
+</div>
+
+
+
+
 
 </form>
+<!-- ================================ end of form ============================= -->
 
 
 
-<br>
+<div id="buttondiv">
 <button onclick=gradeUser()>
     click me
 </button>
-<br>
+</div>
+
 
 
 <div id="outputdiv"> 
 	Output here...
-	<!-- this hidden div is blank on purpose -->
 </div>
+
+
+
+</div>
+<!-- close of container -->
+
 
 </body>
 </html>

@@ -2,7 +2,7 @@
 	width: 90vw;
 	float: left;
 	margin-left: 5vw;
-	background-color: yellow;
+	background-color: black;
 }
 
 
@@ -37,28 +37,28 @@ font-family: Comic Sans MS;
 
 #headertext {
 font-size: 26pt;
-background-color: pink;
+background-color: black;
 color: white;
 }
 
 
 
 #outputdiv {
-background-color: red;
+background-color: black;
 color: white;
 
 }
 
 .questionbox {
-background-color: white;
-color: black;
+background-color: black;
+color: white;
 }
 
 
 
 
 #buttondiv{
-background-color: green;
+background-color: black;
 }
 
 

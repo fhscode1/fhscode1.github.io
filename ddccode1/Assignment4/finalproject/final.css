@@ -5,6 +5,10 @@
 	background-color: black;
 }
 
+img{
+float: left;
+clear: both;     
+}
 
 div {
 padding : 1vw;

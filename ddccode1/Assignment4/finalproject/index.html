@@ -8,46 +8,93 @@
 //Aidan Lopez (alo)
 
 function gradeUser(){
-	
 
+var isAlly = 1;
+var missingAnswer = 0; 
+var feedback = "";
 var answer1 = document.myForm.r1.value;
-var myId = document.getElementById("outputdiv");
-// this is the text output that is red.....
+// var answer2 = document.myForm.r2.value;
 
 
 
-// fetch the id, then fetch the form data and put into the div
-myId.innerHTML = "your form data is..."  + answer1   +   "  and .. "  + myForm.r1.value ;
-
-
-// condition check on the radio button....  
+// condition check on the 3 critical questions... 
 var answer2 =  myForm.r1.value ;
-
-var memeFileName = "junk.png";
 
 switch(  answer2  )
 {
-  case "Y":
-    memeFileName  = "1.jpg";
-
-    //  this is where you would randomly pick a number between 1 and 10
-
-
-
-
-    break;
   case "N":
+    memeFileName  = "1.jpg";
+    //  this is where you would randomly pick a number between 1 and 10
+    break;
+  case "Y":
+    isAlly = 0;
     memeFileName = "hater.png";
     break;
   case "O":
     memeFileName = "other.png";
     break;
   default:
-    memeFileName = "error.png";
+    var junk = "junk";
 } // end switch
 
 
+
+
+// use a for loop to check 99 questions to see if any are not answered....
+
+
+var loopQuestion = "x";
+var loopAnswer =  "x"; 
+// declare above and use them below...
+
+
+for (  var i = 1     ;   i <=4         ;  i++       )
+    {
+    loopQuestion = "r" + i; 
+    console.log("test:  "  +  loopQuestion  );
+    var tempString = "myForm."  + loopQuestion + ".value"  ; 
+    loopAnswer =  tempString ;
+    
+    switch(  loopAnswer  )
+        {
+          case "N":
+            break;
+          case "Y":
+            break;
+          case "O":
+            break;
+          default:
+            missingAnswer = 1;   
+            isAlly = 0; 
+            memeFileName = "error.png";
+            feedback = "error, please answer yes or no to all questions, try again.."
+        } // end switch
+     }
+// end of for loop.   
+
+
+
+
 console.log( "file name check ... "  + memeFileName);
+console.log( "missingAnswer=" + missingAnswer);
+console.log( "isAlly=" + isAlly);
+
+var myId = document.getElementById("outputdiv");
+// this is the text output that is red.....
+
+// fetch the id, then fetch the form data and put into the div
+myId.innerHTML = feedback ;
+
+if (missingAnswer) 
+   {
+   myId.style.color = "red";
+   }
+   else
+      {
+      myId.style.color = "white";  
+      }
+
+
 
 // get ID of the div that's mostly invisible
 var myId = document.getElementById("memeresult")	
@@ -91,11 +138,13 @@ myId.appendChild(myElement);
 
 <form name="myForm">
 
+
+
+
 <div class="questionbox">
-	Do you support equal rights for all people? <br>
-		<input type="radio" name="r1" value="Y">Yes  <br>
-		<input type="radio" name="r1" value="N">No <br>
-		<input type="radio" name="r1" value="O">Other 
+  Do you support adoption restrictions just for LGBTQIA parents? <br>
+    <input type="radio" name="r1" value="Y">Yes  <br>
+    <input type="radio" name="r1" value="N">No <br>
 </div>
 
 <div class="questionbox">
@@ -104,6 +153,7 @@ myId.appendChild(myElement);
     <input type="radio" name="r2" value="N">No <br>
     <input type="radio" name="r2" value="O">Uncomfortable answering
 </div>
+
 
 <div class="questionbox">
    Do you believe in science? <br>
@@ -119,6 +169,11 @@ myId.appendChild(myElement);
     <input type="radio" name="r4" value="O">Other 
 </div>
 
+
+
+
+
+<!-- 
 <div class="questionbox">
    Do you enjoy playing video games? <br>
     <input type="radio" name="r5" value="Y">Yes  <br>
@@ -154,15 +209,23 @@ myId.appendChild(myElement);
     <input type="radio" name="r9" value="O">Other 
 </div>
 
+
 <div class="questionbox">
   Do You speak more than one language? <br>
     <input type="radio" name="r10" value="Y">Yes  <br>
     <input type="radio" name="r10" value="N">No <br>
     <input type="radio" name="r10" value="O">Other 
-</div>
+</div> -->
 
 </form>
 <!-- ================================ end of form ============================= -->
+
+<div id="buttondiv">
+<button onclick=gradeUser()>
+    click me
+</button>
+</div>
+
 
 
 <div id="memeresult">
@@ -170,11 +233,6 @@ myId.appendChild(myElement);
 </div>
 
 
-<div id="buttondiv">
-<button onclick=gradeUser()>
-    click me
-</button>
-</div>
 
 
 

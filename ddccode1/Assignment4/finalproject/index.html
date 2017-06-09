@@ -14,7 +14,6 @@ var missingAnswer = 0;
 var feedback = "";
 var answer1 = document.myForm.r1.value;
 var memeFileName = "";
-// var answer2 = document.myForm.r2.value;
 
 
 
@@ -72,13 +71,13 @@ for (  var i = 1     ;   i <=4         ;  i++       )
           default:
             missingAnswer = 1;   
             isAlly = 0; 
-           
+            feedback = "error, please answer yes or no to all questions, try again..";
         } // end switch
      }
 // end of for loop.   
 
 
-// console.log( "file name check ... "  + memeFileName);
+console.log( "file name check ... "  + memeFileName);
 console.log( "missingAnswer=" + missingAnswer);
 console.log( "isAlly=" + isAlly);
 
@@ -88,21 +87,8 @@ var myId = document.getElementById("outputdiv");
 // fetch the id, then fetch the form data and put into the div
 myId.innerHTML = feedback ;
 
-if (missingAnswer == 1)   
-   {
-   myId.style.color = "red";
-            feedback = "error, please answer yes or no to all questions, try again..";
-   }
-   // else
-   //    {
-   //    myId.style.color = "white";  
-   //    }
-
-
-
 // get ID of the div that's mostly invisible
 var myId = document.getElementById("memeresult")	
-
 
 // Create an image tag  aka an HTML elemnt
 var myElement = document.createElement("img");             
@@ -119,31 +105,18 @@ myElement.setAttributeNode(myAttribute);
 myId.appendChild(myElement);                     
 // Append img element to div  should show up asap
 
-
-
 }
 // end of function
-
-
-
-
 </script>
 </head>
 <body>
 <div id="container">
 
-
-
-
 <div id="headertext">
 	My Final Project
 </div>
 
-
 <form name="myForm">
-
-
-
 
 <div class="questionbox">
   Do you support adoption restrictions just for LGBTQIA parents? <br>
@@ -157,7 +130,6 @@ myId.appendChild(myElement);
     <input type="radio" name="r2" value="N">No <br>
     <input type="radio" name="r2" value="O">Uncomfortable answering
 </div>
-
 
 <div class="questionbox">
    Do you believe in science? <br>
@@ -173,11 +145,6 @@ myId.appendChild(myElement);
     <input type="radio" name="r4" value="O">Other 
 </div>
 
-
-
-
-
-<!-- 
 <div class="questionbox">
    Do you enjoy playing video games? <br>
     <input type="radio" name="r5" value="Y">Yes  <br>
@@ -219,7 +186,7 @@ myId.appendChild(myElement);
     <input type="radio" name="r10" value="Y">Yes  <br>
     <input type="radio" name="r10" value="N">No <br>
     <input type="radio" name="r10" value="O">Other 
-</div> -->
+</div>
 
 </form>
 <!-- ================================ end of form ============================= -->
@@ -230,25 +197,14 @@ myId.appendChild(myElement);
 </button>
 </div>
 
-
-
 <div id="memeresult">
 <!-- empty div -->
 </div>
 
-
-
-
-
 <div id="outputdiv"> 
 	Output here...
 </div>
-
-
-
 </div>
-<!-- close of container -->
-
-
+<!-- ================================close of container============================= -->
 </body>
 </html>
